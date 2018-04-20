@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="557.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="559.0">
+         <children>
+            <Button mnemonicParsing="false" text="Robot" />
+            <Button mnemonicParsing="false" text="Shelf">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Station">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Delete">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Clear">
+               <HBox.margin>
+                  <Insets left="120.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Load...">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Save...">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <AnchorPane prefHeight="433.0" prefWidth="562.0">
+         <children>
+            <VBox layoutX="348.0" prefHeight="477.0" prefWidth="209.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="132.0" prefWidth="209.0" text="Warehouse">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="109.0" prefWidth="207.0">
+                           <children>
+                              <Slider blockIncrement="2.0" layoutX="60.0" layoutY="14.0" majorTickUnit="2.0" max="15.0" min="3.0" minorTickCount="2" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="2.0" />
+                              <Label layoutX="8.0" layoutY="15.0" text="Height:" />
+                              <Slider blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="2.0" max="15.0" min="3.0" minorTickCount="2" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="2.0" />
+                              <Label layoutX="10.0" layoutY="49.0" text="Width:" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="184.0" prefWidth="209.0" text="Orders">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="207.0">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="14.0" prefHeight="27.0" prefWidth="110.0" />
+                              <Button layoutX="124.0" layoutY="13.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="76.0" text="Generate" />
+                              <ListView layoutX="22.0" layoutY="46.0" prefHeight="98.0" prefWidth="169.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="158.0" prefWidth="209.0" text="Robots">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="207.0">
+                           <children>
+                              <Slider blockIncrement="20.0" layoutX="26.0" layoutY="88.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="20" prefHeight="38.0" prefWidth="172.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+                              <Label layoutX="8.0" layoutY="6.0" text="Capacity:" />
+                              <Label layoutX="9.0" layoutY="71.0" text="Charging Speed:" />
+                              <Slider blockIncrement="20.0" layoutX="29.0" layoutY="27.0" majorTickUnit="20.0" minorTickCount="20" prefHeight="38.0" prefWidth="172.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="30.0" layoutY="82.0" prefHeight="301.0" prefWidth="290.0" AnchorPane.topAnchor="82.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="4" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="6" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="8" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
+                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" />
+                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" />
+                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" />
+                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="2" />
+                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="4" />
+                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="6" />
+                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="8" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" text="START" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
+
