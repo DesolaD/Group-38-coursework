@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class Databases {
+	private final ArrayList<Robot> items;
+	
+	public Databases(){
+		items = new ArrayList<Robot>();
+	}
+
+	public void getItems(Robot item) {
+		items.add(item);
+	}
+}

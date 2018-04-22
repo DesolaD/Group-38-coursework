@@ -1,0 +1,16 @@
+import java.io.FileInputStream;
+
+public class Simulation {
+	
+	private Reader read;
+	private FileInputStream file;
+	
+	public Simulation(){
+		read = new Reader();
+		FileInputStream file = new FileInputStream("E:\java programming\COURSEWORK 3\coursework\Project\src\twoShelves.sim");
+	}
+	
+	public String xxx(){
+		read.readStream(file);
+	}
+}

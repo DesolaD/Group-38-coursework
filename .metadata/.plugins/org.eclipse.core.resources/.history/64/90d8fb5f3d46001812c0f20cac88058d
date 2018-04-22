@@ -1,0 +1,7 @@
+
+public class Simulation {
+	
+	private Reader read;
+	
+	read.readStream();
+}

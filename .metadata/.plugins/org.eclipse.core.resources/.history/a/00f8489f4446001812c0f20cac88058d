@@ -1,0 +1,11 @@
+
+public class test {
+	
+	private static Reader read;
+
+	public static void main(String[] args) {
+		read.readStream();
+
+	}
+
+}

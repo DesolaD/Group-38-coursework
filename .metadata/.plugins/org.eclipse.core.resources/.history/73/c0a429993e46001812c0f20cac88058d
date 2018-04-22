@@ -1,0 +1,11 @@
+
+public class Simulation {
+	
+	private Reader read;
+	
+	public Simulation(){
+		read = new Reader();
+	}
+	
+	read.readStream("twoShelves.sim");
+}

@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="557.0" prefWidth="559.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="540.0" maxWidth="562.0" minHeight="540.0" minWidth="562.0" prefHeight="540.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="30.0" prefWidth="559.0">
          <children>
-            <Button mnemonicParsing="false" text="Robot" />
-            <Button mnemonicParsing="false" text="Shelf">
+            <Button fx:id="robotButton" mnemonicParsing="false" text="Robot" />
+            <Button fx:id="shelfButton" mnemonicParsing="false" text="Shelf">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Station">
+            <Button fx:id="stationButton" mnemonicParsing="false" text="Station">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Delete">
+            <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
@@ -55,9 +55,9 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="109.0" prefWidth="207.0">
                            <children>
-                              <Slider blockIncrement="2.0" layoutX="60.0" layoutY="14.0" majorTickUnit="2.0" max="15.0" min="3.0" minorTickCount="2" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="2.0" />
+                              <Slider fx:id="heightSlider" blockIncrement="1.0" layoutX="60.0" layoutY="14.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseClicked="#sliderClick" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="9.0" />
                               <Label layoutX="8.0" layoutY="15.0" text="Height:" />
-                              <Slider blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="2.0" max="15.0" min="3.0" minorTickCount="2" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="2.0" />
+                              <Slider fx:id="widthSlider" blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseClicked="#sliderClick" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="9.0" />
                               <Label layoutX="10.0" layoutY="49.0" text="Width:" />
                            </children>
                         </AnchorPane>
@@ -88,7 +88,7 @@
                   </TitledPane>
                </children>
             </VBox>
-            <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="30.0" layoutY="82.0" prefHeight="301.0" prefWidth="290.0" AnchorPane.topAnchor="82.0">
+            <GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" layoutX="30.0" layoutY="82.0" prefHeight="301.0" prefWidth="290.0" AnchorPane.topAnchor="82.0">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -136,10 +136,10 @@
                   <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" />
                   <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" />
                   <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="2" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="4" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="6" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="8" />
+                  <Arc fx:id="robot1" fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="2" />
+                  <Arc fx:id="robot2" fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="4" />
+                  <Arc fx:id="robot3" fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="6" />
+                  <Arc fx:id="robot4" fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="8" />
                </children>
             </GridPane>
          </children>
@@ -151,4 +151,3 @@
       </HBox>
    </children>
 </VBox>
-
