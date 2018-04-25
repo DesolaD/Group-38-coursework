@@ -1,0 +1,54 @@
+public void showUserData() {
+    int numUsers = usersModel.numberOfUsers(); // number of users(rows) in the database
+
+    ColumnConstraints column1 = new ColumnConstraints();
+    column1.setPercentWidth(40);
+    ColumnConstraints column2 = new ColumnConstraints();
+    column2.setPercentWidth(60);
+
+    int counter = 0;
+
+    for(int i = 0; i <= numUsers - 1; i++) {
+        subGrid = new GridPane();
+        subGrid.getColumnConstraints().addAll(column1, column2);
+        userImage = new ImageView();
+
+        subGrid.setStyle("-fx-background-color: #dddddd;");
+
+        subGrid.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                System.out.println("mouse click detected! " + mouseEvent.getSource());
+                subGrid.setStyle("-fx-background-color: blue;");
+            }
+        });
+
+        vbox = new VBox();
+
+        vbox.getChildren().add(new Label("Name: " + getUserData().get(counter)));
+        vbox.getChildren().add(new Label("Username: " + getUserData().get(counter + 1)));
+        vbox.getChildren().add(new Label("Position: " + getUserData().get(counter + 2)));
+
+        subGrid.add(vbox, 1, 0);
+
+        user = new Image("file:///" + getUserImage().get(i));
+        userImage.setFitWidth(150);
+        userImage.setFitHeight(150);
+        userImage.setSmooth(true);
+        userImage.setPreserveRatio(true);
+        userImage.setImage(user);
+
+        subGrid.add(userImage, 0, 0);
+
+        if(i % 2 == 0 && i == 0) {
+            mainGrid.add(subGrid, 0, 0);
+        } else if (i % 2 == 0 && i != 0){
+            mainGrid.add(subGrid, 0, i - 1);
+        } else {
+            mainGrid.add(subGrid, 1, i - 1);
+        }
+
+        scroll.setContent(mainGrid);
+        counter = counter + 3;
+    }
+}

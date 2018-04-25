@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.shape.*?>
@@ -11,18 +12,18 @@
    <children>
       <HBox prefHeight="30.0" prefWidth="559.0">
          <children>
-            <Button mnemonicParsing="false" text="Robot" />
-            <Button mnemonicParsing="false" text="Shelf">
+            <Button fx:id="robotButton" mnemonicParsing="false" text="Robot" />
+            <Button fx:id="shelfButton" mnemonicParsing="false" text="Shelf">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Station">
+            <Button fx:id="stationButton" mnemonicParsing="false" text="Station">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Delete">
+            <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>
@@ -55,9 +56,9 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="109.0" prefWidth="207.0">
                            <children>
-                              <Slider fx:id="heightSlider" blockIncrement="1.0" layoutX="60.0" layoutY="14.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseClicked="#sliderClick" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="9.0" />
+                              <Slider fx:id="heightSlider" blockIncrement="1.0" layoutX="60.0" layoutY="14.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseDragged="#sliderClickHeight" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="9.0" />
                               <Label layoutX="8.0" layoutY="15.0" text="Height:" />
-                              <Slider fx:id="widthSlider" blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseClicked="#sliderClick" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="9.0" />
+                              <Slider fx:id="widthSlider" blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseDragged="#sliderClickWidth" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="9.0" />
                               <Label layoutX="10.0" layoutY="49.0" text="Width:" />
                            </children>
                         </AnchorPane>
@@ -111,35 +112,93 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="2" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="4" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="6" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe61f" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.rowIndex="8" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff3821" height="28.0" stroke="BLACK" strokeType="INSIDE" width="31.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" />
-                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" />
-                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" />
-                  <Circle fill="#1ff3ff" radius="16.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="2" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="4" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="6" />
-                  <Arc fill="#ff1f84cc" length="270.0" radiusX="16.0" radiusY="18.0" startAngle="-45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" GridPane.columnIndex="8" />
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+              <children>
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+				  <StackPane onMouseClicked="#addChild" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+
+
                </children>
             </GridPane>
          </children>

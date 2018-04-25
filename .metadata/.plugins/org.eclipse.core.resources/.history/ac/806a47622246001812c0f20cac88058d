@@ -1,6 +1,0 @@
-
-public class Warehouse {
-
-	private int heightSlider;
-	private int widthSlider;
-}
