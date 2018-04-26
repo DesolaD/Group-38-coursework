@@ -58,7 +58,7 @@
                            <children>
                               <Slider fx:id="heightSlider" blockIncrement="1.0" layoutX="60.0" layoutY="14.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseDragged="#sliderClickHeight" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="9.0" />
                               <Label layoutX="8.0" layoutY="15.0" text="Height:" />
-                              <Slider fx:id="widthSlider" blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseDragged="#sliderClickWidth" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" value="9.0" />
+                              <Slider fx:id="widthSlider" blockIncrement="2.0" layoutX="60.0" layoutY="49.0" majorTickUnit="1.0" max="9.0" min="3.0" minorTickCount="0" onMouseDragged="#sliderClickWidth" prefHeight="38.0" prefWidth="144.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="9.0" />
                               <Label layoutX="10.0" layoutY="49.0" text="Width:" />
                            </children>
                         </AnchorPane>
